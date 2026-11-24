@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/> 
+<title>Foxhole</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231a201b'/%3E%3Cpath d='M32 6 58 32 32 58 6 32Z' fill='none' stroke='%23d2ad62' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='30' fill='%23ede8d5'%3EF%3C/text%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="hud">
+  <div class="topbar">
+    <div class="brand"><span class="crest">F</span><span>FOXHOLE</span></div>
+    <div class="status"><span class="pulse"></span><span id="phase">DAWN PATROL</span></div>
+  </div>
+  <div class="left-panel">
+    <div class="eyebrow">COMBAT ZONE</div>
+    <div class="sector"><span id="sector">KLOSTER HEIGHTS</span></div>
+    <div class="meter-row"><span>SUPPLY</span><div class="bar"><i id="supplyBar"></i></div><b id="supplyText">100</b></div>
+    <div class="meter-row health-row"><span>VITALS</span><div class="bar"><i id="healthBar"></i></div><b id="healthText">100</b></div>
+  </div>
+  <div class="objective">
+    <div class="eyebrow">PRIMARY OBJECTIVE</div>
+    <div id="objective">SEIZE THE RELAY POINT</div>
+  </div>
+  <div class="bottom-panel">
+    <div class="unit-card"><div class="portrait">♞</div><div><small>YOU</small><strong>RANGER</strong></div></div>
+    <div class="ammo"><span id="weapon">RIFLE</span><strong id="ammo">24</strong><small>/ 120</small></div>
+  </div>
+  <div id="crosshair"></div>
+  <div class="mobile-controls"><div id="stick" class="stick">MOVE</div><button id="mobileFire">FIRE</button><button id="mobileReload">R</button></div>
+  <div id="damage"></div>
+  <div id="start" class="overlay">
+    <div class="fieldmark">FIELD OPERATIONS // 04</div>
+    <h1>FOXHOLE</h1>
+    <p>Hold the line. Capture the relay.<br/>Survive the advance.</p>
+    <button id="play">DEPLOY</button>
+    <div class="keys">WASD move · Mouse aim · Click fire · R reload · Shift sprint</div>
+  </div>
+  <div id="toast"></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
